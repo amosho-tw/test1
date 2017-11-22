@@ -3,7 +3,8 @@ var http = require('http');
 var server = http.createServer(function(req, res) {
 	res.writeHead(200, {
 		'Context-Type' : 'text/plain'
-	});
+	}); 
+	
 	
 	res.end('test123');
 	console.info('receive request for ' + req.url);
