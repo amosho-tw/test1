@@ -1,14 +1,13 @@
-var http = require('http');
+var module1 = require('./module1');
 
-var server = http.createServer(function(req, res) {
-	res.writeHead(200, {
-		'Context-Type' : 'text/plain'
-	});
-	
-	res.end('test123');
-	console.info('receive request for ' + req.url);
-});
+var cnt = module1.next();
 
-server.listen(3000);
+console.info('cnt='+cnt);
 
-console.info('server running at localhost:3000');
+cnt = module1.next();
+
+console.info('cnt='+cnt);
+
+cnt = module1.next();
+
+console.info('cnt='+cnt);
